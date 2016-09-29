@@ -1,6 +1,7 @@
 module IndexContentsHelper
 	def extract_and_store_content(url)
-	require 'open-uri'
+		require 'open-uri'
+
 	  	html_doc = Nokogiri::HTML(open(url))
 	  	indexed_url = UrlIndex.store_url(url)	
 
@@ -24,6 +25,7 @@ module IndexContentsHelper
 	  	links.each do |links_element|
 	  		indexed_url.store_content(links_element['href'], 'link')
 	  	end
+	  	
 	  	return indexed_url
     end
 
