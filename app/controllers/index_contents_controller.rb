@@ -2,17 +2,22 @@ class IndexContentsController < ApplicationController
  include IndexContentsHelper
 
   def index
-
-=begin  	url = params[:url]
-=end
-	url = "too1"
+	url = params[:url]
 	index_url = extract_and_store_content(url)
-	render json: index_url, status: 200
+	if params[:callback]
+		render json: index_url, status: 200, :callback => params[:callback]
+   	else
+		render json: index_url, status: 200
+    end
   end
 
   def fetch
 	urls = UrlIndex.all()
-	render json: urls, status: 200
+		if params[:callback]
+			render json: urls, status: 200, :callback => params[:callback]
+	   	else
+			render json: urls, status: 200
+	    end
   end
 
 end

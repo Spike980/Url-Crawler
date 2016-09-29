@@ -1,6 +1,7 @@
 module IndexContentsHelper
 	def extract_and_store_content(url)
-	  	html_doc = Nokogiri::HTML("<html><body><h1>Mr. Belvedere Fan Club</h1></body></html>")
+	require 'open-uri'
+	  	html_doc = Nokogiri::HTML(open(url))
 	  	indexed_url = UrlIndex.store_url(url)	
 
 	  	h1 = html_doc.css('h1')
@@ -18,14 +19,10 @@ module IndexContentsHelper
 	  		indexed_url.store_content(h3_element.text, 'h3')
 	  	end
 
-	  	h3 = html_doc.css('h3')
-	  	h3.each do |h3_element|
-	  		indexed_url.store_content(h3_element.text, 'h3')
-	  	end
 
 	  	links = html_doc.css('a')
 	  	links.each do |links_element|
-	  		indexed_url.store_content(links_element.href, 'link')
+	  		indexed_url.store_content(links_element['href'], 'link')
 	  	end
 	  	return indexed_url
     end
