@@ -37,5 +37,6 @@ Start webpack-dev server:
 
 <h2>Licence</h2>
 <a href="license.md">(GNU GPLv3 Licence)</a>
+This code is under GNU GPLv3 licence, you can find the complete file here: https://github.com/Spike980/Url-Crawler/blob/master/License.md
 
 
