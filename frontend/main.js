@@ -40,7 +40,7 @@ class Main extends React.Component {
 		let url = this.refs.indexing_url.value;
 
 	    $.ajax({
-		    url: "http://localhost:3000/indexing_url/",
+		    url: "http://localhost:3000/indexurl/",
 		 
 		    // The name of the callback parameter, as specified by the YQL service
 		    jsonp: "callback",
@@ -61,6 +61,8 @@ class Main extends React.Component {
 		    	})
 		    }.bind(this)
 		});
+
+		this.refs.index_form.reset();
 
 	}
 
