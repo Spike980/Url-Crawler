@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  content: MyText
-  type: 
+  content: "An h1 tag"
+  content_type: h1
   url_index: one
 
 two:
-  content: MyText
-  type: 
+  content: "A link from the url"
+  content_type: link
   url_index: two

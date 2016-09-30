@@ -5,7 +5,8 @@ class IndexContentsController < ApplicationController
 	url = params[:url]
 	index_url = extract_and_store_content(url)
 	if(index_url == "error") 
-		render text: "invalid url", status: 422
+		render plain: "invalid url", status: 422
+		return
 	end
 	
 	if params[:callback]
