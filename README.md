@@ -1,4 +1,3 @@
-# README
 <h1>Url Crawler</h1>
 <p>This is a small sample application to crawl through a requested url and store its contents in the database.
 Rails API is used in the backend with a React application consuming the data in the frontend. Both React and Rails
@@ -36,6 +35,7 @@ Start webpack-dev server:
 	webpack-dev-server --progress
 </code></pre>
 
-
+<h2>Licence</h2>
+<a href="license.md">(GNU GPLv3 Licence)</a>
 
 
