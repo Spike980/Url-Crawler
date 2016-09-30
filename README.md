@@ -1,7 +1,7 @@
 <h1>Url Crawler</h1>
 <p>This is a small sample application to crawl through a requested url and store its contents in the database.
 Rails API is used in the backend with a React application consuming the data in the frontend. Both React and Rails
-should run on seperate servers. Minitest is used for testing Rails API</p>
+runs on seperate servers. Minitest is used for testing Rails API</p>
 
 <h2>Requirements:</h2>
 <ul>
